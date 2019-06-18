@@ -1,5 +1,5 @@
 const Post = require('../models/Post');
-
+const sharp = require ('sharp');
 module.exports = {
   async index(req, res){
     const posts = await Post.find().sort('-createdAt');
